@@ -1,0 +1,97 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: celestial-framework
+description: for humans- by lesbidoodles ; with hope for a better future
+base-image: ghcr.io/ublue-os/ucore-hci
+image-version: testing 
+# module configuration, executed in order
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / 
+
+  - type: dnf
+    repos:
+      copr:
+        - atim/starship
+        - yalter/niri
+        - externalived/keyd
+    install:
+      packages:
+        - keyd
+        - waybar
+        - fuzzel
+        - kitty
+        - niri
+        - vim
+        - fzf
+        - ripgrep
+        - zoxide
+        - fd-find
+        - bat
+        - eza
+        - btop
+        - nvtop
+        - radeontop
+        - starship
+        - tree-sitter-cli
+        - rocm-smi-devel
+        - neovim
+        - python3-neovim
+        - wl-clipboard
+        - luarocks
+        - git
+        - sshfs
+        - curl
+        - wget
+        - dlocate
+        - s-tui
+        - stress-ng
+        - gcc
+        - gcc-c++
+        - vulkan-tools
+        - vulkan-devel
+        - glx-tools
+        - libdrm-devel
+        - lm_sensors
+        - gdu
+        - ncdu
+        - tree
+        - diskus
+        - nmap
+        - traceroute
+        - whois
+        - netcat-openbsd
+        - swaybg
+        - ccache
+        - rustup
+    remove:
+      packages:
+        - nano
+        - alacritty
+        - btrfs-progs
+        - intel-gpu-firmware
+        - nano-default-editor
+        - nfs-client-utils
+        - nfs-common-utils
+        - azure-vm-utils
+
+  - type: default-flatpaks
+    configurations:
+      - notify: true 
+        scope: system
+        # If no repo information is specified, Flathub will be used by default
+        install: # system flatpaks 
+          - net.codelogistics.webapps
+          - org.gnome.Loupe
+          - net.waterfox.waterfox
+          - org.virt_manager.virt-manager
+      - scope: user # Also add Flathub user repo, but no user packages
+  - type: rpm-ostree
+    remove:
+      - cockpit
+      - cockpit-bridge
+      - cockpit-ws
+
+  - type: signing 
