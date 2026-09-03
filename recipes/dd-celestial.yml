@@ -3,13 +3,13 @@
 name: celestial-framework
 description: for humans- by lesbidoodles ; with hope for a better future
 base-image: ghcr.io/ublue-os/ucore-hci
-image-version: testing 
+image-version: testing
 # module configuration, executed in order
 modules:
   - type: files
     files:
       - source: system
-        destination: / 
+        destination: /
 
   - type: dnf
     repos:
@@ -18,6 +18,8 @@ modules:
         - yalter/niri
     install:
       packages:
+        - sddm-conf
+        - sddm-wayland-generic
         - foot
         - waybar
         - fuzzel
@@ -75,10 +77,10 @@ modules:
 
   - type: default-flatpaks
     configurations:
-      - notify: true 
+      - notify: true
         scope: system
         # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks 
+        install: # system flatpaks
           - net.codelogistics.webapps
           - org.gnome.Loupe
           - net.waterfox.waterfox
@@ -90,4 +92,4 @@ modules:
       - source: system
         destination: /
 
-  - type: signing 
+  - type: signing
