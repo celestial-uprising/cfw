@@ -68,6 +68,9 @@ modules:
         - nfs-client-utils
         - nfs-common-utils
         - azure-vm-utils
+        - cockpit
+        - cockpit-bridge
+        - cockpit-ws
 
   - type: default-flatpaks
     configurations:
@@ -80,10 +83,5 @@ modules:
           - net.waterfox.waterfox
           - org.virt_manager.virt-manager
       - scope: user # Also add Flathub user repo, but no user packages
-  - type: rpm-ostree
-    remove:
-      - cockpit
-      - cockpit-bridge
-      - cockpit-ws
 
   - type: signing 
