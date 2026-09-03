@@ -1,51 +1,59 @@
 # celestial-framework &nbsp; [![bluebuild build badge](https://github.com/celestial-shepherd/celestial_shepherd/actions/workflows/build.yml/badge.svg)](https://github.com/celestial-shepherd/celestial_shepherd/actions/workflows/build.yml)
 
-## celestial-framework 
+## celestial-framework
 
-CFW (currently the 'main' of this repo) features a ublue-hci base; stripped of annoying cockpit utilities, the never-needed nano, btrfs-progs, and several other small reductions. Then, built into the immutable image itself: a minimal, preconfigured niri desktop with a clean and useful waybar, matching fuzzel, and opinionated-yet-minimal kitty. Modern tools (eza, ripgrep, btop, etc) are included out-of-the-box, as well as rustup for maintaining the latest toolchain, and neovim (as well as its dependencies, and those of lazyvim, and even vim itself).
+CFW (currently the 'main' of this repo) features a ublue-hci base, with several small reductions. Then, built into the immutable image itself: minimal, preconfigured niri desktop with a clean and useful defaults, matching waybar fuzzel, and opinionated-yet-minimal kitty. Modern tools (eza, ripgrep, btop, etc) are included out-of-the-box, as well as rustup for maintaining the latest toolchain, and neovim (as well as its dependencies, and those of lazyvim, and even vim itself).
 
-# CF is proudly built for everyone, by lesbidoodles!
+# CF is proudly built for everyone, by lesbidoodles
 
-## Roadmap for Celestia-Framework 
+## Roadmap for Celestia-Framework
+
 **CF** will have three planned 'sub-versions' (as well as nvidia variants for each)
+
 - **CFM** - [Celestial Framework Mini] hyperminimal, desktop-ready variant; without qemu/kvm, libvirtd, or their accompanying tools (virt-manager flatpak and virsh are still installed)
 - **CFW** - [Celestial Framework WS] desktop-ready, and full-featured (for a minimalist with work to do)
 - **CFH** - [Celestial Framework Headless] server-oriented, deployable, and reliable- for headless enviroments (or anything without a monitor attached...)
 
 Testing and development is performed on a small array of ryzen based machines with a variety of radeon and nvidia dgpus/igpus; by a coven of elusive rabbits with whom gaia has bestowed the privilege of magic.
 
-
 ## Installation
 
 To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
+
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/celestial-shepherd/celestial-framework:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/celestial-uprising/cfw:latest
   ```
+
 - Reboot to complete the rebase:
-  ```
-  systemctl reboot
-  ```
-- Then rebase to the signed image, like so:
-  ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/celestial-shepherd/celestial-framework:latest
-  ```
-- Reboot again to complete the installation
+
   ```
   systemctl reboot
   ```
 
-The `latest` tag will automatically point to the latest build. 
+- Then rebase to the signed image, like so:
+
+  ```
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/celestial-uprising/cfw:latest
+  ```
+
+- Reboot again to complete the installation
+
+  ```
+  systemctl reboot
+  ```
+
+The `latest` tag will automatically point to the latest build.
 
 ## ISO
 
-If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/how-to/generate-iso/#_top). 
+If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/how-to/generate-iso/#_top).
 
 ## Verification
 
 These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](https://github.com/sigstore/cosign). You can verify the signature by downloading the `cosign.pub` file from this repo and running the following command:
 
 ```bash
-cosign verify --key cosign.pub ghcr.io/celestial-shepherd/celestial_shepherd
+cosign verify --key cosign.pub ghcr.io/celestial-uprising/cfw
 ```

@@ -65,8 +65,6 @@ modules:
       packages:
         - nano
         - alacritty
-        - btrfs-progs
-        - intel-gpu-firmware
         - nano-default-editor
         - nfs-client-utils
         - nfs-common-utils
