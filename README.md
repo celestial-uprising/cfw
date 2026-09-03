@@ -5,7 +5,7 @@ CF is a family of purpose-build, highly-functional, family immutable Linux opera
 
 CFW (currently the 'main' of this repo) features a ublue-hci base; stripped of annoying cockpit utilities, the never-needed nano, btrfs-progs, and several other small reductions. Then, built into the immutable image itself: a minimal, preconfigured niri desktop with a clean and useful waybar, matching fuzzel, and opinionated-yet-minimal kitty. Modern tools (eza, ripgrep, btop, etc) are included out-of-the-box, as well as rustup for maintaining the latest toolchain, and neovim (as well as its dependencies, and those of lazyvim, and even vim itself).
 
-CF is proudly built for everyone, by lesbidoodles!
+# CF is proudly built for everyone, by lesbidoodles!
 
 ## Roadmap for Celestia-Framework 
 **CF** will have three planned 'sub-versions' (as well as nvidia variants for each)
@@ -13,7 +13,7 @@ CF is proudly built for everyone, by lesbidoodles!
 - **CFW** - [Celestial Framework WS] desktop-ready, and full-featured (for a minimalist with work to do)
 - **CFH** - [Celestial Framework Headless] server-oriented, deployable, and reliable- for headless enviroments (or anything without a monitor attached...)
 
-Testing and development is performed on a small array of ryzen based machines with a variety of radeon and nvidia dgpus/igpus; by a coven of elusive rabbits with whom gaia has bestowed the privelege of magic.
+Testing and development is performed on a small array of ryzen based machines with a variety of radeon and nvidia dgpus/igpus; by a coven of elusive rabbits with whom gaia has bestowed the privilege of magic.
 
 
 ## Installation
