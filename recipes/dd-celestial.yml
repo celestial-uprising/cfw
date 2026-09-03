@@ -16,10 +16,8 @@ modules:
       copr:
         - atim/starship
         - yalter/niri
-        - externalived/keyd
     install:
       packages:
-        - keyd
         - waybar
         - fuzzel
         - kitty
