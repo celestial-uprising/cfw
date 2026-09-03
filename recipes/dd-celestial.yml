@@ -16,10 +16,9 @@ modules:
       copr:
         - atim/starship
         - yalter/niri
-        - jlk/keyd
     install:
       packages:
-        - keyd
+        - foot
         - waybar
         - fuzzel
         - kitty
@@ -85,5 +84,10 @@ modules:
           - net.waterfox.waterfox
           - org.virt_manager.virt-manager
       - scope: user # Also add Flathub user repo, but no user packages
+
+  - type: files
+    files:
+      - source: system
+        destination: /
 
   - type: signing 
