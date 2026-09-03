@@ -60,7 +60,7 @@ modules:
         - nmap
         - traceroute
         - whois
-        - netcat-openbsd
+        - netcat
         - swaybg
         - ccache
         - rustup
