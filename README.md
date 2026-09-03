@@ -1,17 +1,17 @@
 # celestial-framework &nbsp; [![bluebuild build badge](https://github.com/celestial-shepherd/celestial_shepherd/actions/workflows/build.yml/badge.svg)](https://github.com/celestial-shepherd/celestial_shepherd/actions/workflows/build.yml)
 
-## Celestial-Framework 
+## celestial-framework 
 CF is a family of purpose-build, highly-functional, family immutable Linux operating-systems; designed with a simplicity-as-beauty ethos- and with enough reliability that even the most resentful and overworked devs can willfully shoot themselves in the foot and keep running at full speed.
 
-CF-daily (currently the 'main' of this repo) features a ublue-hci base; stripped of annoying cockpit utilities, the never-needed nano, btrfs-progs, and several other small reductions. Then, built into the immutable image itself: a minimal, preconfigured Niri desktop with a clean and useful waybar, matching fuzzel, and opinionated-yet-minimal kitty. Modern tools (eza, ripgrep, btop, etc) are included out-of-the-box, as well as rustup for maintaining the latest toolchain, and neovim (as well as its dependencies, and those of lazyvim, and even vim itself).
+CFW (currently the 'main' of this repo) features a ublue-hci base; stripped of annoying cockpit utilities, the never-needed nano, btrfs-progs, and several other small reductions. Then, built into the immutable image itself: a minimal, preconfigured niri desktop with a clean and useful waybar, matching fuzzel, and opinionated-yet-minimal kitty. Modern tools (eza, ripgrep, btop, etc) are included out-of-the-box, as well as rustup for maintaining the latest toolchain, and neovim (as well as its dependencies, and those of lazyvim, and even vim itself).
 
 CF is proudly built for everyone, by lesbidoodles!
 
 ## Roadmap for Celestia-Framework 
 **CF** will have three planned 'sub-versions' (as well as nvidia variants for each)
-- **[Celestial Framework Mini]** hyperminimal, desktop-ready variant; without qemu/kvm, libvirtd, or their accompanying tools (virt-manager flatpak and virsh are still installed)
-- **[Celestial Framework WS]** desktop-ready, and full-featured (for a minimalist with work to do)
-- **[Celestial Framework Headless]** server-oriented, deployable, and reliable- for headless enviroments (or anything without a monitor attached...)
+- **CFM** - [Celestial Framework Mini] hyperminimal, desktop-ready variant; without qemu/kvm, libvirtd, or their accompanying tools (virt-manager flatpak and virsh are still installed)
+- **CFW** - [Celestial Framework WS] desktop-ready, and full-featured (for a minimalist with work to do)
+- **CFH** - [Celestial Framework Headless] server-oriented, deployable, and reliable- for headless enviroments (or anything without a monitor attached...)
 
 Testing and development is performed on a small array of ryzen based machines with a variety of radeon and nvidia dgpus/igpus; by a coven of elusive rabbits with whom gaia has bestowed the privelege of magic.
 
