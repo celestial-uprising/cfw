@@ -1,7 +1,6 @@
 # celestial-framework &nbsp; [![bluebuild build badge](https://github.com/celestial-shepherd/celestial_shepherd/actions/workflows/build.yml/badge.svg)](https://github.com/celestial-shepherd/celestial_shepherd/actions/workflows/build.yml)
 
 ## celestial-framework 
-CF is a family of purpose-build, highly-functional, family immutable Linux operating-systems; designed with a simplicity-as-beauty ethos- and with enough reliability that even the most resentful and overworked devs can willfully shoot themselves in the foot and keep running at full speed.
 
 CFW (currently the 'main' of this repo) features a ublue-hci base; stripped of annoying cockpit utilities, the never-needed nano, btrfs-progs, and several other small reductions. Then, built into the immutable image itself: a minimal, preconfigured niri desktop with a clean and useful waybar, matching fuzzel, and opinionated-yet-minimal kitty. Modern tools (eza, ripgrep, btop, etc) are included out-of-the-box, as well as rustup for maintaining the latest toolchain, and neovim (as well as its dependencies, and those of lazyvim, and even vim itself).
 
