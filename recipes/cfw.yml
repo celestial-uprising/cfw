@@ -20,7 +20,6 @@ modules:
       packages:
         - sddm-conf
         - sddm-wayland-generic
-        - foot
         - waybar
         - fuzzel
         - kitty
@@ -46,10 +45,6 @@ modules:
         - wget
         - s-tui
         - stress-ng
-        - gcc
-        - gcc-c++
-        - vulkan-tools
-        - vulkan-devel
         - libdrm-devel
         - gdu
         - ncdu
@@ -59,8 +54,6 @@ modules:
         - traceroute
         - whois
         - swaybg
-        - ccache
-        - rustup
     remove:
       packages:
         - nano
